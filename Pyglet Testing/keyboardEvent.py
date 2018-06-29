@@ -5,7 +5,7 @@ window = pyglet.window.Window()
 
 @window.event
 def on_key_press(symbol, modifiers):
-    print('A key was pressed')
+    print(f'The {symbol} key was pressed.')
 
 
 @window.event
