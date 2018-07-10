@@ -8,9 +8,10 @@ class Card:
     def __init__(self, value, suit):
         self.value = value
         self.suit = suit
-        
+
     def show(self):
         return self
 
 
-deck = [Card(value, suit) for value in values for suit in suits]
+deck = [Card(value, suit) for value in values
+                          for suit in suits]
