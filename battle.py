@@ -11,32 +11,13 @@ import random
 
 # essentially just refer to Chapter 5 in automate
 
-goblin = {"max_hp": 20,
-          "current_hp": 20,
-          "min_dmg": 1,
-          "max_dmg": 3,
-          "armor": 0,
-          "dodge": 0,
-          "speed": 1,
-          "group": "enemy"
-          }
-
-human = {"max_hp": 30,
-         "current_hp": 30,
-         "min_dmg": 2,
-         "max_dmg": 4,
-         "armor": 0,
-         "dodge": 0,
-         "speed": 2,
-         "group": "party"
-         }
-
 
 class Combat:
     def __init__(self, kwargs):
         self.action = None
         for key, value in kwargs.items():
             setattr(self, key, value)
+        self.current_hp = self.max_hp
 
     #        self.health = kwargs["health"]
     #        self.min_dmg = kwargs["min_dmg"]
@@ -63,4 +44,20 @@ def battle(party, enemies):
 
 
 if __name__ == "__main__":
-    pass
+    goblin = {"max_hp": 20,
+              "min_dmg": 1,
+              "max_dmg": 3,
+              "armor": 0,
+              "dodge": 0,
+              "speed": 1,
+              "group": "enemy"
+              }
+
+    human = {"max_hp": 30,
+             "min_dmg": 2,
+             "max_dmg": 4,
+             "armor": 0,
+             "dodge": 0,
+             "speed": 2,
+             "group": "party"
+             }

@@ -18,5 +18,6 @@ class Mammal(Animal):
 
 if __name__ == "__main__":
     dog = Mammal()
+    print(dog.alive)
     dog.move()
     dog.birth_live_young()
