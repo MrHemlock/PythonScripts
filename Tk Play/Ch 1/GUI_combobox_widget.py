@@ -8,9 +8,11 @@ win = tk.Tk()
 # Add a title
 win.title("Textbox Fun")
 
+
 # Modified Button Click Function
 def click_me():
-    action.configure(text = 'Hello ' + name.get())
+    action.configure(text=f"Hello {name.get()}")
+
 
 # Changing our Label
 ttk.Label(win, text="Enter a name:").grid(column=0, row=0)
@@ -30,7 +32,6 @@ number_chosen = ttk.Combobox(win, width=12, textvariable=number)
 number_chosen['values'] = (1, 2, 4, 42, 100)
 number_chosen.grid(column=1, row=1)
 number_chosen.current(0)
-
 
 # Places cursor on name Entry on program start
 name_entered.focus()
