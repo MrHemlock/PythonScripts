@@ -11,7 +11,7 @@ win.title("Textbox Fun")
 
 # Modified Button Click Function
 def click_me():
-    action.configure(text=f"Hello {name.get()}")
+    action.configure(text=f"Hello {name.get()} {number_chosen.get()}")
 
 
 # Changing our Label
@@ -29,7 +29,7 @@ action.grid(column=2, row=1)
 # Configure Combobox widget
 ttk.Label(win, text="Choose a number:").grid(column=1, row=0)
 number = tk.StringVar()
-number_chosen = ttk.Combobox(win, width=12, textvariable=number)
+number_chosen = ttk.Combobox(win, width=12, textvariable=number, state='readonly')  # makes combobox read only
 number_chosen['values'] = (1, 2, 4, 42, 100)
 number_chosen.grid(column=1, row=1)
 number_chosen.current(0)
