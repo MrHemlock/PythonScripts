@@ -1,4 +1,6 @@
 import random
+import sqlite3 as lite
+
 
 # for key, value in kwargs:
 #    setattr(self, key, value)
@@ -18,6 +20,7 @@ class Combat:
         for key, value in kwargs.items():
             setattr(self, key, value)
         self.current_hp = self.max_hp
+        self.alive = True
 
     #        self.health = kwargs["health"]
     #        self.min_dmg = kwargs["min_dmg"]
@@ -43,21 +46,14 @@ def battle(party, enemies):
     pass
 
 
-if __name__ == "__main__":
-    goblin = {"max_hp": 20,
-              "min_dmg": 1,
-              "max_dmg": 3,
-              "armor": 0,
-              "dodge": 0,
-              "speed": 1,
-              "group": "enemy"
-              }
+def health_check(func, party, enemies):
+    pass
 
-    human = {"max_hp": 30,
-             "min_dmg": 2,
-             "max_dmg": 4,
-             "armor": 0,
-             "dodge": 0,
-             "speed": 2,
-             "group": "party"
-             }
+
+def enemy_team_gen():
+    party = []
+    enemies = []
+
+
+if __name__ == "__main__":
+    pass
